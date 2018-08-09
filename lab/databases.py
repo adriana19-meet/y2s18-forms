@@ -46,6 +46,13 @@ def delete_student(name):
 		name=name).delete()
 	session.commit()
 
+
+
+def delete_student_id(id):
+
+	session.query(Student).filter_by(student_id=id).delete()
+	session.commit()	
+
 def update_lab_status(name, finished_lab):
 	"""
 	Update a student in the database, with 
